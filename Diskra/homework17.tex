@@ -1,0 +1,133 @@
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{center}	
+		Домашнне задание №17 \\
+		Григорьев Дмитрий БПМИ--163
+	\end{center}
+	\textbf{Задание 1.}
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+	Рассмотрим множество таких последовательностей. Заметим, что после любой из трех цифр может идти только две. Тогда после любой цифры мы можем выбрать одну из двух; построим новую последовательность по исходной. Запомним первую цифру. Далее после нее может идти только одна из двух цифр, если идет меньшая из возможных, то добавляем в новую последовательность 0, а если большее, то 1. Тогда мы получим из исходной последовательности одно число -- это первая цифра в исходной последовательности и бесконечную двоичную последовательность.
+	Теперь мы можем однозначно получить из исходной последовательности новую и так же из новой можем однозначно получить исходную. Так как множество бесконечных двоичных последовательностей имеет мощность континуум, то и мощность данного множества -- континуум.
+	\begin{flushright}	
+		\textbf{Ответ: континуум}
+	\end{flushright} 
+	\textbf{Задание 2.} 
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+	Рассмотрим такое множество отношений эквивалентности. Так же рассмотрим множество отношений эквивалентности, которое разбивает множество натуральных чисел на два класса эквивалентности. Заметим, что множество элементов одного класса эквивалентности однозначно задает этот класс эквивалентности, значит и второй. Следовательно мощность такого множества равна мощности множества всех подмножеств из натурпальных чисел. А эта мощность -- континуум. Следовательно мощность данного множества не меньше континуума. \\
+	Теперь рассмотрим множество всех бинарных отношений на $\mathbb{N}$. Мощность этого множества равна мощности $\mathbb{N} \times \mathbb{N} $ -- а это континуум, а множество всех отношений эквивалентностей явяется подмножеством множества бинарных отношений, следовательно, сверху оно ограничено континуумом. Значит множество отношений эквивалентности на множестве натуральных чисел	имеет множество континуум. \\
+	
+	\begin{flushright}	
+		\textbf{ч. т. д.}
+	\end{flushright}
+	\textbf{Задание 3.} 
+	\newline
+	\textbf{Решение:} 
+	\newline
+	\indent
+	Это задание решается аналогично предыдущему.\\
+	Пусть $\lambda$ -- мощность множества всех подмножеств в $\mathbb{R}$. Тогда рассмотрим множество всех отношений эквивалентности на $\mathbb{R}$. Тогда рассмотрим его подмножество -- множество таких отношений эквивалентности, что они разбивают множество $\mathbb{R}$ на два класса эквивалентности. Заметим, что класс эквивалентности однозначно задается множеством элементов, входящих в него. А это значит, что искомая мощность множества сверху ограничена $\lambda$. \\
+	Так же заметим, что множество всех отношений эквивалентности -- это подмножество всех бинарных отношений на $\mathbb{R}$. Подмножество всех бинарных отношений на $\mathbb{R}$ имеет мощность, равную мощности $\mathbb{R} \times \mathbb{R}$ -- а это
+	$\lambda$.\\
+	Получилось, что сверху и снизу искомая мощность ограничена $\lambda$, значит она равна $\lambda$, т.е. мощности множества всех подмножеств в $\mathbb{R}$.
+	\begin{flushright}
+		\textbf{Ответ: мощность множества всех подмножеств в $\mathbb{R}$}
+	\end{flushright}
+	\noindent
+	\textbf{Задание 4.} 
+	\newline
+	\textbf{Решение:} 
+	\newline
+	\indent
+	Для того, чтобы данную функцию приивести к ДНФ можно просто раскрыть скобки, но это очень грамостко, поэтому легче найти все наборы переменных, при которых данная функция является истиной. Найдем такие решения методом цепочек. У нас всего для x1 и x2 подходит три набора, дальше, оттталкиваясь от них находим все остальные. Всего решений 10:
+	\renewcommand{\arraystretch}{1}
+	\renewcommand{\tabcolsep}{0.5 cm}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			x1 & x2 & x3 & x4 & x5 & x6 & x7 & x8 & x9 \\
+			\hline
+			1& 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
+			\hline
+			1& 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
+			\hline
+			1& 0 & 1 & 0 & 1 & 1 & 1 & 1 & 1 \\ 
+			\hline
+			1& 0 & 1 & 0 & 1 & 0 & 1 & 1 & 1 \\ 
+			\hline
+			1& 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\ 
+			\hline
+			0& 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
+			\hline
+			0& 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
+			\hline
+			0& 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\ 
+			\hline
+			0& 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 \\ 
+			\hline
+			0& 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\ 
+			\hline		
+		\end{tabular}
+	\end{center}
+	Теперь, имея все решения, легко построиь ДНФ. Просто распишем для каждого набора конъюнкцию переменных, так, чтобы каждая переменная встречалась не более 1 раза, и это выражение являлось истиной. Потом просто составим дизъюнкцию таких выражений. В итоге получится:
+	\newline
+	(x1 $\wedge$ x2 $\wedge$ x3 $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ $\overline{x4}$ $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ $\overline{x4}$ $\wedge$ x5 $\wedge$ $\overline{x6}$ $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ $\overline{x4}$ $\wedge$ x5 $\wedge$ $\overline{x6}$ $\wedge$ x7 $\wedge$ $\overline{x8}$ $\wedge$ x9) $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ x3 $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ $\overline{x3}$ $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ $\overline{x3}$ $\wedge$ x4 $\wedge$ $\overline{x5}$ $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9)  $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ $\overline{x3}$ $\wedge$ x4 $\wedge$ $\overline{x5}$ $\wedge$ x6 $\wedge$ $\overline{x7}$ $\wedge$ x8 $\wedge$ $\overline{x9}$)
+	\begin{flushright}
+	\textbf{Ответ: (x1 $\wedge$ x2 $\wedge$ x3 $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ $\overline{x4}$ $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ $\overline{x4}$ $\wedge$ x5 $\wedge$ $\overline{x6}$ $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ (x1 $\wedge$ $\overline{x2}$ $\wedge$ x3 $\wedge$ $\overline{x4}$ $\wedge$ x5 $\wedge$ $\overline{x6}$ $\wedge$ x7 $\wedge$ $\overline{x8}$ $\wedge$ x9) $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ x3 $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ $\overline{x3}$ $\wedge$ x4 $\wedge$ x5 $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9) $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ $\overline{x3}$ $\wedge$ x4 $\wedge$ $\overline{x5}$ $\wedge$ x6 $\wedge$ x7 $\wedge$ x8 $\wedge$ x9)  $\vee$ ($\overline{x1}$ $\wedge$ x2 $\wedge$ $\overline{x3}$ $\wedge$ x4 $\wedge$ $\overline{x5}$ $\wedge$ x6 $\wedge$ $\overline{x7}$ $\wedge$ x8 $\wedge$ $\overline{x9}$)}
+	\end{flushright}
+	\noindent
+	\textbf{Задание 5.}
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+	Чтобы доказать это сведем Штрих Шеффера к системе $\{ \vee , \neg \}$, которая является полной. \\
+	1) Выразим операцию $\neg$ через Штрих Шеффера. \\
+	X | X  $ \Leftrightarrow \overline{X \wedge X} \Leftrightarrow \overline{X}$$\vee \overline{X} \Leftrightarrow \overline{X}$ \\
+	2) Выразим операцию $\vee$ через Штрих Шеффера. \\
+	$X \vee Y \Leftrightarrow \overline{\overline{X} \wedge \overline{Y}}$ =>
+	X | Y $\Leftrightarrow$ (X | X) | (Y | Y) \\
+	Получилось, что система, состоящая из Штриха Шеффера -- полная система.
+	\begin{flushright}
+		\textbf{ч.т.д.}
+	\end{flushright}
+	\textbf{Задание 6.} 
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+	Мы знаем, что двое отрицание не меняет высказывание, т.е. A $\Leftrightarrow$ $\overline{\overline{A}}$. Так же мы знаем, что любое выражение можно привести к ДНФ. Тогда воспользуемся этими утверждениями и приведем $\overline{A}$ к ДНФ. Теперь возьмем полученное выражение под отрицание. Заметим, что оно эквивалентно A(так как двое отрицание ничего не поменяло), и так же приведено к КНФ, так как при отрицании ДНФ все конъюнкции стали дизъюнкциями и наоборот. \\
+	Следовательно мы можем выразить любое выражение в виде КНФ.
+	\begin{flushright}
+		\textbf{ч.т.д.}
+	\end{flushright}
+	\textbf{Задание 7.} 
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+	Докажем по индукции, что их $2^n - 1$. \\
+	1) База. При  n = 1 у нас будет только один коэффициент, что верно.\\
+	2) Шаг индукции. Педположим, что при n $\leq$ k предположение верно, докажем для n = k + 1. \\
+	$x_1 \lor x_2 \lor ... \lor x_k$ имеет $2^k - 1$ ненулевыx коэффициентов.\\
+	Найдем для $x_1 \lor x_2 \lor ... \lor x_k \lor x_{k + 1}$ = $(x_1 \lor x_2 \lor ... \lor x_k) \oplus (x_1 \lor x_2 \lor ... \lor x_k)(x_{k + 1}) \oplus x_{k + 1}$.\\
+	Следовательно ненулевых коэффициентов будет $2^k - 1 + 2^k - 1 + 1 = 2 \cdot 2^k - 1 = 2^{k + 1} - 1$
+	\begin{flushright}
+		ч.т.д.
+	\end{flushright}
+	\begin{flushright}
+		\textbf{Ответ: $2^n - 1$}
+	\end{flushright}
+\end{document}
