@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{center}	
+		Домашнне задание №1 \\
+		Григорьев Дмитрий БПМИ--163
+	\end{center}
+	\textbf{Задание 1.}
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+	1) Докажем, что формула $m \circ n = mn - m - n - 2$ задает бинарную операцию на множестве $\mathbb{Q} \backslash \{1\}$ \\
+	Рассмотрим при каких m и n $m \circ n = 1$ : \\
+	$mn - m - n + 2 = 1$ \\
+	$mn - m - n = -1$ \\
+	$m(n - 1) = n - 1$ \\
+	$m(n - 1) - (n - 1) = 0$ \\	
+	$(n - 1)(m - 1) = 0$ \\	
+	Получилось, что $m \circ n = 1$ только при $m = 1$ или $n = 1$. \\
+	Так как $m \circ n = mn - m - n + 2 = m(n - 1) - (n - 1) + 1 = (m - 1)(n - 1) + 1$, тогда т.к. $\forall m, n \in \mathbb{Q} \backslash \{1\},~(m - 1) \in \mathbb{Q} \backslash \{1\},~(n - 1) \in \mathbb{Q} \backslash \{1\}$, то \\
+	 $\forall m, n \in \mathbb{Q} \backslash \{1\},~(m - 1)(n - 1) + 1\in \mathbb{Q} \backslash \{1\}$\\
+	 Получилось, что $\forall m, n \in \mathbb{Q} \backslash \{1\},~m \circ n \in \mathbb{Q} \backslash \{1\}$, значит формула \\
+	 $m \circ n = mn - m - n - 2$ задает бинарную операцию на множестве $\mathbb{Q} \backslash \{1\}$. \\
+	 \indent
+	 2) Докажем, что ($\mathbb{Q} \backslash \{1\}, \circ$) является группой \\
+	 $\bullet$ ассоциативность: \\
+	 $(a \circ b)\circ c = (ab - a - b + 2)c - (ab - a - b + 2) - c + 2 = abc - ac - bc + c - ab + a + b = c(ab - a - b) - (ab - a - b) + c = (ab - a - b)(c - 1) + c$ \\
+	 $a \circ (b\circ c) = a(bc - b - c + 2) - a - (bc - b - c + 2) + 2 = abc - ab - ac + 2a - a - bc + b + c - 2 + 2 = c(ab - a - b) - (ab - a - b) + c = (ab - a - b)(c - 1) + c$ \\ 
+	 Получается, что $(a \circ b) \circ c = a \circ (b \circ c) ~ \forall a, b, c \in \mathbb{Q} \backslash \{1\}$, значит $\circ$ -- ассоциативна\\
+	 $\bullet$ нейтральный элемент: \\
+	 $e \circ a = ea - e - a + 2$\\
+	 $a \circ e = ae - a - e + 2$\\
+	 Получили, что $e \circ a = a \circ e$, теперь найдем $e$: \\
+	 $e \circ a = a \\
+	 ea - e - a + 2 = a \\
+	 ea - e - 2a + 2 = 0 \\
+	 e(a - 1) - 2(a - 1) = 0 \\
+	 (e - 2)(a - 1) = 0$\\
+	 Нейтральный элемент равен 2 \\
+	 Получилось, что $\forall a \in \mathbb{Q} \backslash \{1\}~\exists e = 2, (a \circ e) = (e \circ a) = a$ \\
+	 $\bullet$ Обратный элемент: \\
+	 $a \circ b = ab - a - b + 2 \\
+	 b \circ a = ba - b - a + 2$ \\
+	 Получилось, что $a \circ b = b \circ a$ \\
+	 $a \circ b = e \\
+	 ab - a - b + 2 = 2 \\
+	 a(b - 1) - (b - 1) = 1 \\
+	 (a - 1)(b - 1) = 1 \\
+	 a - 1 = \frac{1}{b - 1} \\
+	 a = \frac{b}{b - 1}$ \\
+	 Получилось, что $\forall a \in \mathbb{Q} \backslash \{1\}~\exists a^{-1} \in \mathbb{Q} \backslash \{1\}, a = \frac{a}{a - 1}$ \\
+	 \\
+	 Получилось, что $(\mathbb{Q} \backslash \{1\}, \circ)$ является группой 
+	\begin{flushright}	
+		\textbf{ч.т.д.}
+	\end{flushright}
+	\textbf{Задание 2.} 
+	\newline
+	\textbf{Решение:} 
+	\newline
+	\indent
+	$\mathbb{Z}^{12}$ -- $\{0, 1, 2, ..., 11\}$\\
+	Нейтральный элемент -- 0, поэтому для 0 порядок равен 1.\\
+	Для других элементов $g$ должно быть: \\
+	Пусть порядок равен $q$ \\
+	$gq = 0~(mod 12)$ \\
+	$q = \frac{12}{gcd(12, g)}$
+	\begin{flushright}
+		\textbf{Ответ: для 0 порядок равен 1, для остальных $g \in \mathbb{Z}_{12}$ порядок равен$\frac{12}{gcd(12, g)}$}
+	\end{flushright}
+	\noindent
+	\textbf{Задание 3.} 
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+	В любой подгруппе должен быть нейтральный элемент. \\
+	Так как у нас $\mathbb{Z}_{12}$ -- циклическая группа, то все ее подгруппы цикличны. \\
+	Тогда переберем все порождающие элементы и получим нужные подгруппы:\\
+	При порождающем $g = 0$ мы получим подгруппу $\{0\}$ \\
+	При порождающем $g = 1$ мы получим подгруппу равную самой группе $\mathbb{Z}_{12}$ \\
+	При порождающем $g = 2$ мы получим подгруппу $\{0, 2, 4, 6, 8, 10\}$ \\
+	При порождающем $g = 3$ мы получим подгруппу $\{0, 3, 6, 9\}$ \\
+	При порождающем $g = 4$ мы получим подгруппу $\{0, 4, 8\}$ \\
+	При порождающем $g = 5$ мы получим подгруппу $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\}$ \\
+	При порождающем $g = 6$ мы получим подгруппу $\{0, 6\}$ \\
+	При порождающем $g = 7$ мы получим подгруппу $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\}$ \\
+	При порождающем $g = 8$ мы получим подгруппу $\{0, 4, 8\}$ \\	
+	При порождающем $g = 9$ мы получим подгруппу $\{0, 3, 6, 9\}$\\
+	При порождающем $g = 10$ мы получим подгруппу $\{0, 2, 4, 6, 8, 10\}$ \\
+	При порождающем $g = 11$ мы получим подгруппу $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\}$ \\
+	В итоге мы получили 6 различных подгрупп: \\
+	$\{0\} \\
+	\{0, 6\} \\
+	\{0, 4, 8\} \\
+	\{0, 3, 6, 9\}\\
+	\{0, 2, 4, 6, 8, 10\}\\
+	\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\}$\\
+	\begin{flushright}	
+		\textbf{ч.т.д.}
+	\end{flushright}
+	
+
+\end{document}

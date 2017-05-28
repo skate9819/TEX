@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{center}	
+		Домашнне задание №3 \\
+		Григорьев Дмитрий БПМИ--163
+	\end{center}
+	\textbf{Задание 1.}
+	\newline
+	\textbf{Решение:}
+	\newline
+	\indent
+		Так как $\mathbb{Z}_6$ не примарная группа, то заменим $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_6 \backsimeq \mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$ на $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$. \\4
+		Пусть $a \in \mathbb{Z}_3, b \in \mathbb{Z}_4, c \in \mathbb{Z}_2, d  \in \mathbb{Z}_3 \Rightarrow (a, b, c, d) \in \mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$. По следствию из Теоремы о разложении на сумму примарных групп, $ord[(a, b, c, d)] =$  НОК$[ord(a), ord(b), ord(c), ord(d)]$. \\
+		
+		1) $ord[(a, b, c, d)] = 2$, значит НОК порядков равен так же равен 2, и порядяки $a, b, c, d$ не превосходят 2. Посмотрим сколько элементов не выше порядка 2 содержатся в $\mathbb{Z}_3, \mathbb{Z}_4, \mathbb{Z}_2, \mathbb{Z}_3$. \\
+		$\{0\} \in \mathbb{Z}_3, \{0, 2\} \in \mathbb{Z}_4, \{0, 1\} \in \mathbb{Z}_2, \{0\} \in \mathbb{Z}_3$. Значит в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$ $1 \cdot 2 \cdot 2 \cdot 1 = 4$ элементов порядка не выше 2. Но тут есть элемент $(0, 0, 0, 0)$ порядка 1. Итого, в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_6$ элементов порядка 2 -- 4 - 1 = 3.\\
+		
+		2) $ord[(a, b, c, d)] = 3$, значит НОК порядков равен так же равен 3, и порядяки $a, b, c, d$ не превосходят 3. Посмотрим сколько элементов порядка не выше 3 и не равному 2 содержатся в $\mathbb{Z}_3, \mathbb{Z}_4, \mathbb{Z}_2, \mathbb{Z}_3$. \\
+		$\{0, 1, 2\} \in \mathbb{Z}_3, \{0\} \in \mathbb{Z}_4, \{0\} \in \mathbb{Z}_2, \{0, 1, 2\} \in \mathbb{Z}_3$. Значит в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$ $3 \cdot 1 \cdot 1 \cdot 3 = 9$ элементов порядка не выше 3 и не равному 2. Но тут есть элемент порядка 1 -- $(0, 0, 0, 0)$ Итого, в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$ элементов порядка 3 -- 9 - 1 = 8.\\
+		
+		3) $ord[(a, b, c, d)] = 4$, значит НОК порядков равен так же равен 4, и порядяки $a, b, c, d$ не превосходят 4. Посмотрим сколько элементов не выше порядка 4 и не равному 3 содержатся в $\mathbb{Z}_3, \mathbb{Z}_4, \mathbb{Z}_2, \mathbb{Z}_3$. \\
+		$\{0\} \in \mathbb{Z}_3, \{0, 1, 2, 3\} \in \mathbb{Z}_4, \{0, 1\} \in \mathbb{Z}_2, \{0\} \in \mathbb{Z}_3$. Значит в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$ $1 \cdot 4 \cdot 2 \cdot 1 = 8$ элементов порядка не выше 4 и не равному 3. Но тут есть элементы порядка не выше 2, вычтем посчитанное ранее количество элементов порядка не выше 2. Итого, в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_6$ элементов порядка 4 -- 8 - 4 = 4.\\
+		
+		4) $ord[(a, b, c, d)] = 6$, значит НОК порядков равен так же равен 6, и порядяки $a, b, c, d$ не превосходят 6. Посмотрим сколько элементов не выше порядка 6 и не равному 4 содержатся в $\mathbb{Z}_3, \mathbb{Z}_4, \mathbb{Z}_2, \mathbb{Z}_3$. \\
+		$\{0, 1, 2\} \in \mathbb{Z}_3, \{0, 2\} \in \mathbb{Z}_4, \{0, 1\} \in \mathbb{Z}_2, \{0, 1, 2\} \in \mathbb{Z}_3$. Значит в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_3$ $3 \cdot 2 \cdot 2 \cdot 3 = 36$ элементов порядка не выше 6 и не равному 4. Но тут есть элементы порядка не выше 2 и ровно 3, вычтем посчитанное ранее количество элементов порядка не выше 2 и ровно 3. Итого, в $\mathbb{Z}_3 \oplus \mathbb{Z}_4 \oplus \mathbb{Z}_6$ элементов порядка 6 -- 36 - 4 - 8 = 24.\\
+				
+	\begin{flushright}	
+		\textbf{}
+	\end{flushright}
+	\newpage
+	\noindent
+	\textbf{Задание 2.} 
+	\newline
+	\textbf{Решение:} 
+	\newline
+	\indent
+	Всего существует две группы порядка 45 (с точностью до изоморфизма): \\
+	$\mathbb{Z}_5 \times \mathbb{Z}_9$ и $\mathbb{Z}_3 \times \mathbb{Z}_{15}$. Но $\mathbb{Z}_5 \times \mathbb{Z}_9$ циклическая, поэтому подходит только $\mathbb{Z}_3 \times \mathbb{Z}_{15} \backsimeq \mathbb{Z}_3 \times \mathbb{Z}_3 \times \mathbb{Z}_5$. \\
+	
+	$\bullet$ Так как 3 -- простое, то все ненулевые элементы порядка 3 порождают подгруппу порядка 3. Чтобы подгруппы не пересекались у них не должно быть общих порождающих.  \\
+	Найдем количество элементов порядка 3. \\
+	$\{0, 1, 2\} \in \mathbb{Z}_3, \{0, 1, 2\} \in \mathbb{Z}_3, \{0\} \in \mathbb{Z}_5$. Но мы учли нулевой элемент (0, 0, 0), поэтому элементов порядка 3 -- $3 \cdot 3 \cdot 1 - 1 = 8$. Так как подгруппы не должны пересекаться, то общих порождающих у них не должно быть. Всего в подгруппе порядка 3 два элемента порядка 3, поэтому разных подгрупп порядка 3 -- $8 / 2 = 4$.\\
+	
+	$\bullet$ Теперь найдем количество элементво порядка 15.\\
+	В $\mathbb{Z}_5$ порядка 5 -- 4 элемента. В $\mathbb{Z}_3 \times \mathbb{Z}_3$ элементов порядка не выше 3 -- 9, но тут учитанэлемент порядка 1, поэто всего элементов порядка 3 -- 8. Так как подгруппы не должны пересекаться, то общих порождающих у них не должно быть. Всего в подгруппе порядка 3 два элемента порядка 3, поэтому разных подгрупп порядка 3 -- $8 \textbackslash 2 = 4$. Получается элеметов порядка 15 -- $4 \cdot 4 = 16$.\\
+	Так как количество образущих в циклической подгруппе порядка $a$ равно $\varphi(a)$, то в подгруппе порядка 15: $\varphi(15) = \varphi(3) \cdot \varphi(5) = 8$ порождающих. Получается, что разных подгрупп порядка 15 в $\mathbb{Z}_3 \times \mathbb{Z}_3 \times \mathbb{Z}_5$ -- $16 / 8 = 2$.\\
+	\newline
+	\textbf{Задание 3.} 
+	\newline
+	\textbf{Решение:} 
+	\newline
+	\indent
+	Так как $\mathbb{Z}_{nm} \backsimeq \mathbb{Z}_{n} \times \mathbb{Z}_{m}$, если $n$ и $m$ -- взаимнопростые, то \\
+	 $\mathbb{Z}_{10} \times \mathbb{Z}_{12} \times \mathbb{Z}_{15} \backsimeq
+	\mathbb{Z}_2 \times \mathbb{Z}_5 \times \mathbb{Z}_3 \times \mathbb{Z}_4 \times \mathbb{Z}_3 \times \mathbb{Z}_5 \backsimeq \mathbb{Z}_{30} \times \mathbb{Z}_{60}$.\\
+	Пусть $H = H_1 \times H_2$, тогда по теореме о факторизации по сомножителям:\\
+	$\mathbb{G} / H \backsimeq \mathbb{Z}_{10} \times \mathbb{Z}_{12} \times \mathbb{Z}_{15} \Leftrightarrow \mathbb{G} / H \backsimeq \mathbb{Z}_{30} \times \mathbb{Z}_{60}$.\\
+	Пусть $a, b$ -- порождающие элементы: $a, b \in \mathbb{Z}, \mathbb{Z} \backsimeq \langle a \rangle, \mathbb{Z} \backsimeq \langle b \rangle$, тогда $H_1 = \langle a^{30} \rangle, H_2 = \langle b^{60} \rangle$, тогда 
+	$H = \langle a^{30} \rangle \times \langle b^{60} \rangle$. \\
+	
+	\noindent
+	\textbf{Задание 4.} 
+	\newline
+	\textbf{Решение:} 
+	\newline
+	\indent
+	$\bullet$ Если $A$ -- циклическая группа порядка $M$, $n$ -- ее образующий, тогда циклическая подгруппа, порожденная элементом $n^{M/m}$ будет иметь порядок $m$.\\
+	\indent
+	$\bullet$ Если $A$ -- не циклическая, тогда $A \backsimeq A_1 \times A_2$, причем $|A_1| = a_1, |A_2| = a_2$. Так как порядок $A$ делится на $m$, то $a_1a_2$ делится на $m$. Тогда найдутся такие $a_1', a_2'$, что  $m = a_1'a_2'$ и $a_1$ делится на $a_1'$, $a_2$ делится на $a_2'$. Пусть $B_1\leq A_1$, $B_2 \leq A_2$ и $|B_1| = a_1', |B_2| = a_2'$. Тогда $B_1 \times B_2 \leq A$, $|B_1 \times B_2| = a_1'a_2' = m$.
+	\begin{flushright}	
+	\textbf{ч.т.д.}
+	\end{flushright}	
+\end{document}

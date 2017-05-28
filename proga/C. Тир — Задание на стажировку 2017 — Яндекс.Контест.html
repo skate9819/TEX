@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://contest.yandex.ru/contest/4085/problems/C/ -->
+<html class="i-ua_js_yes i-ua_css_standard i-ua_svg_yes i-ua_inlinesvg_yes i-ua_placeholder_yes" lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>C. Тир — Задание на стажировку 2017 — Яндекс.Контест</title><link rel="shortcut icon" href="https://contest.yandex.ru/favicon.ico?1492863696463"><script>;(function(d,e,c,r){e=d.documentElement;c="className";r="replace";e[c]=e[c][r]("i-ua_js_no","i-ua_js_yes");if(d.compatMode!="CSS1Compat")e[c]=e[c][r]("i-ua_css_standart","i-ua_css_quirks")})(document);;(function(d,e,c,n,w,v,f){e=d.documentElement;c="className";n="createElementNS";f="firstChild";w="http://www.w3.org/2000/svg";e[c]+=" i-ua_svg_"+(!!d[n]&&!!d[n](w,"svg").createSVGRect?"yes":"no");v=d.createElement("div");v.innerHTML="<svg/>";e[c]+=" i-ua_inlinesvg_"+((v[f]&&v[f].namespaceURI)==w?"yes":"no");})(document);;(function(d,e,p){e=d.documentElement;p="placeholder";e.className+=" i-ua_"+p+(p in d.createElement("input")?"_yes":"_no")})(document);</script><link rel="stylesheet" href="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/highlighter.css"><link rel="stylesheet" href="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/_problems.css"><!--[if IE 6]><link rel="stylesheet" href="//yastatic.net/contest2-www/2017.15.1/bundles/problems/_problems.ie6.css"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="//yastatic.net/contest2-www/2017.15.1/bundles/problems/_problems.ie7.css"/><![endif]--><!--[if IE 8]><link rel="stylesheet" href="//yastatic.net/contest2-www/2017.15.1/bundles/problems/_problems.ie8.css"/><![endif]--><!--[if IE 9]><link rel="stylesheet" href="//yastatic.net/contest2-www/2017.15.1/bundles/problems/_problems.ie9.css"/><![endif]--><link rel="stylesheet" href="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/_problems.print.css" media="print"><script src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/jquery.min.js"></script><script src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/_problems.ru.js"></script><meta name="description" content="Яндекс.Contest это сервис, позволяющий программистам со всего мира соревноваться на предложенных задачах, а преподавателям и авторам задач -- размещать задания и серии заданий и предоставлять доступ пользователям через интернет."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/MathJax.js"></script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({showMathMenu: false});</script><script src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/highlighter.js"></script><script type="text/javascript" async="async" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/watch.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?rev=2.6.0') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?rev=2.6.0') format('woff'), url('https://yandex.st/education-libs/_/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?rev=2.6.0') format('opentype')}
+</style></head><body class="b-page b-page__body i-global i-ua i-ua_interaction_yes page i-bem i-global_js_inited i-ua_platform_other i-ua_hi-dpi_yes i-ua_js_inited page_js_inited" data-bem="{&quot;i-global&quot;:{&quot;lang&quot;:&quot;ru&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;content-region&quot;:&quot;ru&quot;,&quot;click-host&quot;:&quot;//clck.yandex.ru&quot;,&quot;passport-host&quot;:&quot;https://passport.yandex.ru&quot;,&quot;pass-host&quot;:&quot;//pass.yandex.ru&quot;,&quot;social-host&quot;:&quot;//social.yandex.ru&quot;,&quot;export-host&quot;:&quot;https://export.yandex.ru&quot;,&quot;login&quot;:&quot;lisenenkov.gleb&quot;,&quot;lego-static-host&quot;:&quot;//yastatic.net/lego/2.10-142&quot;,&quot;id&quot;:&quot;contest&quot;,&quot;displayName&quot;:&quot;lisenenkov.gleb&quot;,&quot;yandexuid&quot;:&quot;9966933521478079573&quot;,&quot;social-retpath&quot;:&quot;https://contest.yandex.ru/i-social__closer.html&quot;,&quot;retpath&quot;:&quot;https://contest.yandex.ru/contest/4085/problems/C/&quot;,&quot;passport-msg&quot;:&quot;contest&quot;},&quot;i-ua&quot;:{},&quot;page&quot;:{}}" data-interaction="pointer"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div><div class="page__head island"><div class="header layout layout_type_serp i-bem header_js_inited" data-bem="{&quot;header&quot;:{}}" role="banner"><div class="header__main"><div class="layout__col layout__col_size_3 header__logo"><div class="logo2 logo2_lang_ru"><a class="logo2__yandex" href="https://www.yandex.ru/">Яндекс</a><a class="logo2__service" href="https://contest.yandex.ru/">Контест</a></div></div><div class="layout__col header__nav"><div class="dropdown-menu dropdown-menu_theme_ffffff lang-switcher inline-block i-bem" data-bem="{&quot;dropdown-menu&quot;:{},&quot;lang-switcher&quot;:{&quot;tune&quot;:&quot;http://tune.yandex.ru&quot;}}"><span class="lang-switcher__lang lang-switcher__lang_selected_yes link link_pseudo_yes dropdown-menu__switcher i-bem" data-bem="{&quot;link&quot;:{}}" role="button" tabindex="0"><div class="country-flag country-flag_s16_ru lang-switcher__flag"></div><span class="lang-switcher__lang-name">Русский</span></span><div class="popup popup_theme_ffffff popup_autoclosable_yes popup_adaptive_yes popup_animate_yes dropdown__popup lang-switcher__popup-content dropdown-menu__popup"><div class="popup__under"></div><i class="popup__tail"></i><div class="popup__content"><div class="b-menu-vert dropdown-menu__menu dropdown-menu__menu_theme_ffffff" role="menu"><ul class="b-menu-vert__layout"><li class="b-menu-vert__layout-unit b-menu-vert__layout-unit_position_first"><span class="lang-switcher__lang lang-switcher__lang_selected_yes"><div class="country-flag country-flag_s16_ru lang-switcher__flag"></div><span class="lang-switcher__lang-name">Русский</span></span></li><li class="b-menu-vert__layout-unit b-menu-vert__layout-unit_position_last"><a class="lang-switcher__lang" data-bem="{&quot;lang-switcher__lang&quot;:{&quot;lang&quot;:&quot;en&quot;,&quot;url&quot;:&quot;https://contest.yandex.ru/contest/4085/problems/C/?lang=en&quot;}}" href="https://contest.yandex.ru/contest/4085/problems/C/?lang=en" role="button" tabindex="0"><div class="country-flag country-flag_s16_gb lang-switcher__flag"></div><span class="lang-switcher__lang-name">Английский</span></a></li><li class="b-menu-vert__layout-unit lang-switcher__all"><a class="link" href="http://tune.yandex.ru/lang/">Ещё</a></li></ul></div></div></div></div><div class="dropdown-menu dropdown-menu_user_yes dropdown-menu_theme_ffffff i-bem dropdown-menu_js_inited" data-bem="{&quot;dropdown-menu&quot;:{}}"><a class="user user_menu_yes i-bem user_js_inited" data-bem="{&quot;user&quot;:{&quot;domikMods&quot;:{&quot;logo&quot;:&quot;ru&quot;},&quot;login&quot;:&quot;lisenenkov.gleb&quot;}}" href="https://passport.yandex.ru/passport?mode=passport" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false"><span class="user__name" data-bem="{&quot;user__name&quot;:{&quot;maxLength&quot;:16,&quot;maxLengthRelative&quot;:3,&quot;isUglyUserName&quot;:false}}"><span class="user__first-letter">l</span>isenenkov.gleb</span></a><div class="popup popup_theme_ffffff popup_autoclosable_yes popup_adaptive_yes popup_animate_yes dropdown__popup popup popup_fade-out_no popup_watch-scroll_no dropdown-menu__popup dropdown-menu__popup_user_yes i-bem popup_js_inited" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:&quot;bottom-right&quot;}}"><i class="popup__tail"></i><div class="popup__content"><div class="b-menu-vert dropdown-menu__menu dropdown-menu__menu_theme_ffffff" role="menu"><ul class="b-menu-vert__layout"><li class="b-menu-vert__layout-unit b-menu-vert__layout-unit_position_first"><div class="b-menu-vert__item" role="menuitem"><a class="link" href="https://mail.yandex.ru/"><img class="image image_icon_mail" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt=""><span class="link__text user-menu-update i-bem user-menu-update_js_inited" data-bem="{&quot;user-menu-update&quot;:{}}">2 новых письма</span></a></div></li><li class="b-menu-vert__layout-unit"><div class="b-menu-vert__item" role="menuitem"><a class="link" href="https://mail.yandex.ru/compose">Написать письмо</a></div></li><li class="b-menu-vert__layout-unit"><div class="b-menu-vert__item" role="menuitem"><a class="link" href="https://disk.yandex.ru/?source=main-loginmenu"><img class="image image_icon_disk" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt=""><span class="link__text">Мой Диск</span></a></div></li><li class="b-menu-vert__layout-unit"><div class="b-menu-vert__item b-menu-vert__item_separator_yes" role="menuitem"></div></li><li class="b-menu-vert__layout-unit"><div class="b-menu-vert__item" role="menuitem"><a class="link" href="http://tune.yandex.ru/">Настройка</a></div></li><li class="b-menu-vert__layout-unit"><div class="b-menu-vert__item" role="menuitem"><a class="link" href="https://passport.yandex.ru/">Паспорт</a></div></li><li class="b-menu-vert__layout-unit b-menu-vert__layout-unit_position_last"><div class="b-menu-vert__item" role="menuitem"><a class="link user user__logout i-bem user_js_inited" data-bem="{&quot;user&quot;:{&quot;_uniqId&quot;:&quot;user__logout&quot;}}" href="https://passport.yandex.ru/passport?mode=logout&amp;yu=9966933521478079573&amp;retpath=https%3A%2F%2Fcontest.yandex.ru%2Fcontest%2F4085%2Fproblems%2FC%2F">Выйти</a></div></li></ul></div></div></div></div></div></div></div><ul class="tabs-menu tabs-menu_role_sections tabs-menu_size_m tabs-menu_theme_normal tabs-menu_layout_horiz tabs-menu_type_stroked i-bem tabs-menu_js_inited" data-bem="{&quot;tabs-menu&quot;:{}}" role="menu"><div class="tabs-menu__inner"><li class="tabs-menu__tab tabs-menu__tab_first_yes"><a class="link" href="https://contest.yandex.ru/news/">Новости</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest-list/">Соревнования</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/teams/">Команды</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/errors/">Значения ошибок</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/compilers/">Настройки компиляторов</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest/3/enter/">Пробный контест</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/about/">О сервисе</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/profile/">Личный кабинет</a></li></div></ul></div><div class="page__main page__sect"><div class="content content_theme_contest island"><div class="contest-head"><div class="contest-head__item contest-head__item_role_title"><a class="link" href="https://contest.yandex.ru/contest/4085/enter/">Задание на стажировку 2017</a></div><div class="contest-head__item contest-head__item_role_status"><div class="status i-bem" data-bem="{&quot;status&quot;:{&quot;finishTime&quot;:1492885179822}}"><div class="status__props"><div class="status__prop"><div class="status__name inline-block"><img class="image image_type_clock" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt=""></div><div class="status__value inline-block">22&nbsp;апр 2017, 15:21:36</div></div><div class="status__prop"><div class="status__name inline-block">старт:</div><div class="status__value inline-block">22&nbsp;апр 2017, 15:19:39</div></div><div class="status__prop"><div class="status__name inline-block">финиш:</div><div class="status__value inline-block">22&nbsp;апр 2017, 21:19:39</div></div><div class="status__prop"><div class="status__name inline-block">до финиша:</div><div class="status__value inline-block"><div class="countdown i-bem countdown_js_inited" data-bem="{&quot;countdown&quot;:{&quot;name&quot;:&quot;refresh-timer&quot;,&quot;duration&quot;:21483485}}">05:57:54</div></div></div></div><div class="status__props"><div class="snippet snippet_hidden_yes status__snippet i-bem snippet_js_inited" data-bem="{&quot;snippet&quot;:{}}" id=":hidden-info:hidden-status"><div class="snippet__content"><div class="snippet__props"><div class="status__prop"><div class="status__name inline-block">начало:</div><div class="status__value inline-block">28&nbsp;фев 2017, 00:00:00</div></div><div class="status__prop"><div class="status__name inline-block">длительность:</div><div class="status__value inline-block">06:00:00</div></div></div></div></div><span class="link link_pseudo_yes link_role_hidden-info i-bem link_js_inited" data-bem="{&quot;link&quot;:{}}" role="button" tabindex="0" id=":hidden-status"><span class="link__inner">...</span></span></div></div></div><div class="contest-head__item contest-head__item_role_aside"><div class="aside i-bem aside_js_inited" data-bem="{&quot;aside&quot;:{&quot;sk&quot;:&quot;u49d5f1a960571a3aee76f2b9db9e3721&quot;,&quot;contestId&quot;:&quot;4085&quot;}}"><button class="button button_theme_pseudo button_pseudo_yes button_disabled_yes button_role_clarifications button_size_s i-bem button_js_inited" data-bem="{&quot;button&quot;:{}}" role="button" type="button" disabled="disabled"><span class="button__text">Объявления жюри</span></button><div class="popup popup_theme_ffffff popup_autoclosable_yes popup_adaptive_yes popup_animate_yes popup_role_message-box i-bem popup_js_inited" data-bem="{&quot;popup&quot;:{&quot;directions&quot;:{&quot;to&quot;:&quot;bottom&quot;,&quot;offset&quot;:{&quot;top&quot;:10}}}}"><i class="popup__tail"></i><div class="popup__content"><div class="popup__helper"></div></div></div></div></div></div><ul class="tabs-menu tabs-menu_size_m tabs-menu_theme_normal tabs-menu_layout_horiz tabs-menu_role_contest tabs-menu_type_stroked i-bem tabs-menu_js_inited" data-bem="{&quot;tabs-menu&quot;:{}}" role="menu"><li class="tabs-menu__tab tabs-menu__tab_first_yes tabs-menu__tab_active_yes"><a class="link" href="https://contest.yandex.ru/contest/4085/problems/">Задачи</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest/4085/submits/">Посылки</a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest/4085/messages/">Сообщения</a></li></ul><form class="problem problem_type_single problem_mode_one-button problem_contest-type_simple i-bem problem_js_inited" data-bem="{&quot;problem&quot;:{}}" action="https://contest.yandex.ru/contest/4085/submit/" method="POST" enctype="multipart/form-data"><fieldset class="problem__item"><div class="problem__statement text">
+<div class="problem-statement">
+   <div class="header">
+      <h1 class="title">Тир</h1>
+      <table>
+         <tbody><tr class="time-limit">
+            <td class="property-title">Ограничение времени</td>
+            <td>2&nbsp;секунды</td>
+         </tr>
+         <tr class="memory-limit">
+            <td class="property-title">Ограничение памяти</td>
+            <td>256Mb</td>
+         </tr>
+         <tr class="input-file">
+            <td class="property-title">Ввод</td>
+            <td colspan="1">стандартный ввод или input.txt</td>
+         </tr>
+         <tr class="output-file">
+            <td class="property-title">Вывод</td>
+            <td colspan="1">стандартный вывод или output.txt</td>
+         </tr>
+      </tbody></table>
+   </div>
+   <h2></h2>
+   <div class="legend">В результате ряда неудачных попыток попасть по мишеням в игровом тире Вася совсем отчаялся и подумал, что даже случайное ружье
+      стреляло бы лучше, чем он. 
+      <!--l. 37--> 
+      <p style="text-indent: 0em;">Вам предстоит проверить эту гипотезу! 
+      <!--l. 39--> </p> 
+      <p style="text-indent: 0em;">Мишень в игровом тире представляет из себя прямоугольник, состоящий из 
+      <!--l. 39--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#xD7;&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" role="math" style="text-indent: 0em; width: 2.741em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.265em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.372em 1002.26em 2.205em -999.997em); top: -2.021em; left: 0.003em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main; padding-left: 0.241em;">×</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math-italic; padding-left: 0.241em;">m</span></span><span style="display: inline-block; width: 0px; height: 2.027em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mi>n</mi><mo>×</mo><mi>m</mi></math></span></span><script type="math/mml" id="MathJax-Element-1"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mi>
+      n 
+      </mi> 
+      <mo>
+      × 
+      </mo> 
+      <mi>
+      m 
+      </mi> 
+      </math></script> одинаковых клеток. Вася убежден, что настоящее случайное ружье при каждом выстреле попадает в любую из клеток с одинаковой
+      вероятностью 
+      <!--l. 39--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-6" role="math" style="text-indent: 0em; width: 1.432em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(0.896em 1001.19em 2.503em -999.997em); top: -1.961em; left: 0.003em;"><span class="mrow" id="MathJax-Span-7"><span class="mfrac" id="MathJax-Span-8"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px; margin-right: 0.122em; margin-left: 0.122em;"><span style="position: absolute; clip: rect(3.336em 1000.3em 4.17em -999.997em); top: -4.402em; left: 50%; margin-left: -0.176em;"><span class="mrow" id="MathJax-Span-9"><span class="mn" id="MathJax-Span-10" style="font-size: 70.7%; font-family: MathJax_Main;">1</span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(3.515em 1001.01em 4.17em -999.997em); top: -3.628em; left: 50%; margin-left: -0.533em;"><span class="mrow" id="MathJax-Span-11"><span class="mi" id="MathJax-Span-12" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span class="mi" id="MathJax-Span-13" style="font-size: 70.7%; font-family: MathJax_Math-italic;">m</span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(0.836em 1001.19em 1.253em -999.997em); top: -1.307em; left: 0.003em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-top: 1.3px solid; width: 1.193em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.074em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 1.967em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.496em; border-left: 0px solid; width: 0px; height: 1.646em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi><mi>m</mi></mrow></mfrac></math></span></span><script type="math/mml" id="MathJax-Element-2"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mfrac> 
+      <mrow> 
+      <mn>
+      1 
+      </mn> 
+      </mrow> 
+      <mrow> 
+      <mi>
+      n 
+      </mi> 
+      <mi>
+      m 
+      </mi> 
+      </mrow> 
+      </mfrac> 
+      </math></script>. 
+      <!--l. 41--> </p> 
+      <p style="text-indent: 0em;">Посчитайте математическое ожидание количества простреленных клеток случайным ружьем, если известно,
+      что ружье совершило 
+      <!--l. 41--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-14" role="math" style="text-indent: 0em; width: 0.539em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.42em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.074em 1000.42em 2.146em -999.997em); top: -1.961em; left: 0.003em;"><span class="mrow" id="MathJax-Span-15"><span class="mi" id="MathJax-Span-16" style="font-family: MathJax_Math-italic;">k</span></span><span style="display: inline-block; width: 0px; height: 1.967em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 1.004em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mi>k</mi></math></span></span><script type="math/mml" id="MathJax-Element-3"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mi>
+      k 
+      </mi> 
+      </math></script> выстрелов. 
+      <!--l. 43--> </p> 
+      <p style="text-indent: 0em;">Обратите внимание, что по правилам игрового тира клетка считается простреленной, если по ней
+      было совершено хотя бы одно попадание. </p> 
+      <p></p> 
+      <p></p> 
+      <p></p>
+   </div>
+   <h2>Формат ввода</h2>
+   <div class="input-specification">В единственной строке входных данных записано три целых числа — 
+      <!--l. 46--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-17" role="math" style="text-indent: 0em; width: 0.658em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.539em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.372em 1000.54em 2.146em -999.997em); top: -1.961em; left: 0.003em;"><span class="mrow" id="MathJax-Span-18"><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math-italic;">n</span></span><span style="display: inline-block; width: 0px; height: 1.967em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mi>n</mi></math></span></span><script type="math/mml" id="MathJax-Element-4"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mi>
+      n 
+      </mi> 
+      </math></script>, 
+      <!--l. 46--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-20" role="math" style="text-indent: 0em; width: 0.896em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.717em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.372em 1000.72em 2.146em -999.997em); top: -1.961em; left: 0.003em;"><span class="mrow" id="MathJax-Span-21"><span class="mi" id="MathJax-Span-22" style="font-family: MathJax_Math-italic;">m</span></span><span style="display: inline-block; width: 0px; height: 1.967em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mi>m</mi></math></span></span><script type="math/mml" id="MathJax-Element-5"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mi>
+      m 
+      </mi> 
+      </math></script>, 
+      <!--l. 46--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-23" role="math" style="text-indent: 0em; width: 0.539em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.42em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.074em 1000.42em 2.146em -999.997em); top: -1.961em; left: 0.003em;"><span class="mrow" id="MathJax-Span-24"><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math-italic;">k</span></span><span style="display: inline-block; width: 0px; height: 1.967em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 1.004em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mi>k</mi></math></span></span><script type="math/mml" id="MathJax-Element-6"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mi>
+      k 
+      </mi> 
+      </math></script> ( 
+      <!--l. 46--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-26" role="math" style="text-indent: 0em; width: 6.551em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.42em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.134em 1005.36em 2.384em -999.997em); top: -2.021em; left: 0.003em;"><span class="mrow" id="MathJax-Span-27"><span class="mn" id="MathJax-Span-28" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-29" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="mi" id="MathJax-Span-30" style="font-family: MathJax_Math-italic; padding-left: 0.301em;">n</span><span class="mo" id="MathJax-Span-31" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_Math-italic; padding-left: 0.182em;">m</span><span class="mo" id="MathJax-Span-33" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-34" style="font-family: MathJax_Math-italic; padding-left: 0.182em;">k</span><span class="mo" id="MathJax-Span-35" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="mn" id="MathJax-Span-36" style="font-family: MathJax_Main; padding-left: 0.301em;">9</span></span><span style="display: inline-block; width: 0px; height: 2.027em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.282em; border-left: 0px solid; width: 0px; height: 1.218em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mn>1</mn><mo>≤</mo><mi>n</mi><mo>,</mo><mi>m</mi><mo>,</mo><mi>k</mi><mo>≤</mo><mn>9</mn></math></span></span><script type="math/mml" id="MathJax-Element-7"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mn>
+      1 
+      </mn> 
+      <mo>
+      ≤ 
+      </mo> 
+      <mi>
+      n 
+      </mi> 
+      <mo>
+      , 
+      </mo> 
+      <mi>
+      m 
+      </mi> 
+      <mo>
+      , 
+      </mo> 
+      <mi>
+      k 
+      </mi> 
+      <mo>
+      ≤ 
+      </mo> 
+      <mn>
+      9 
+      </mn> 
+      </math></script>), разделенных одним пробелом.
+   </div>
+   <h2>Формат вывода</h2>
+   <div class="output-specification">В единственной строке выходных данных выведите вещественное число, равное искомому математическому ожиданию. Ответ будет считаться
+      правильным, если относительная погрешность не превосходит 
+      <!--l. 49--> 
+      <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; style=&quot;text-indent: 0em;&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-37" role="math" style="text-indent: 0em; width: 2.027em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.67em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(0.955em 1001.67em 2.205em -999.997em); top: -2.021em; left: 0.003em;"><span class="mrow" id="MathJax-Span-38"><span class="mn" id="MathJax-Span-39" style="font-family: MathJax_Main;">1</span><span class="msup" id="MathJax-Span-40"><span style="display: inline-block; position: relative; width: 1.491em; height: 0px;"><span style="position: absolute; clip: rect(3.158em 1000.48em 4.17em -999.997em); top: -3.985em; left: 0.003em;"><span class="mrow" id="MathJax-Span-41"><span class="mn" id="MathJax-Span-42" style="font-family: MathJax_Main;">0</span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.402em; left: 0.479em;"><span class="mrow" id="MathJax-Span-43"><span class="mo" id="MathJax-Span-44" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-45" style="font-size: 70.7%; font-family: MathJax_Main;">9</span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.027em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 1.218em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" style="text-indent: 0em;"><mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo>−</mo><mn>9</mn></mrow></msup></math></span></span><script type="math/mml" id="MathJax-Element-8"><math display="inline" style="text-indent: 0em;" xmlns="http://www.w3.org/1998/Math/MathML"> 
+      <mn>
+      1 
+      </mn> 
+      <msup> 
+      <mrow> 
+      <mn>
+      0 
+      </mn> 
+      </mrow> 
+      <mrow> 
+      <mo>
+      − 
+      </mo> 
+      <mn>
+      9 
+      </mn> 
+      </mrow> 
+      </msup> 
+      </math></script>.
+   </div>
+   <h3>Пример 1</h3>
+   <table class="sample-tests">
+      <thead>
+         <tr>
+            <th>Ввод</th>
+            <th>Вывод</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td><pre>1 1 1
+</pre></td>
+            <td><pre>1.000000000000
+</pre></td>
+         </tr>
+      </tbody>
+   </table>
+   <h3>Пример 2</h3>
+   <table class="sample-tests">
+      <thead>
+         <tr>
+            <th>Ввод</th>
+            <th>Вывод</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td><pre>2 2 9
+</pre></td>
+            <td><pre>3.699661254883
+</pre></td>
+         </tr>
+      </tbody>
+   </table>
+   <h3>Пример 3</h3>
+   <table class="sample-tests">
+      <thead>
+         <tr>
+            <th>Ввод</th>
+            <th>Вывод</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td><pre>9 9 2
+</pre></td>
+            <td><pre>1.987654320988
+</pre></td>
+         </tr>
+      </tbody>
+   </table>
+</div></div><a name="215/2017_02_28/C2wW78rEo2"></a><div class="problem__messages"></div><div class="problem__solution"><div class="solution solution_type_compiler-list i-bem solution_js_inited" data-bem="{&quot;solution&quot;:{&quot;id&quot;:&quot;215/2017_02_28/C2wW78rEo2@compilerId&quot;,&quot;problemId&quot;:&quot;215/2017_02_28/C2wW78rEo2&quot;,&quot;compilerId&quot;:&quot;&quot;,&quot;maxFileSize&quot;:262144,&quot;validation&quot;:{}}}"><label class="solution__label" for="215/2017_02_28/C2wW78rEo2@compilerId">Язык</label><span class="select select_size_s select_theme_normal select_role_compiler-list select_layout_fixed-l i-bem select_js_inited" data-bem="{&quot;select&quot;:{&quot;rows&quot;:8,&quot;live&quot;:true,&quot;selected&quot;:&quot;&quot;}}"><button class="button button_theme_normal button_arrow_down button_size_s select__button i-bem button_js_inited" data-bem="{&quot;button&quot;:{}}" role="listbox" type="button" aria-haspopup="true" aria-expanded="false"><span class="button__text">Free Basic 1.04</span></button><select class="select__control" name="215/2017_02_28/C2wW78rEo2@compilerId" id="uniq14928636781616" tabindex="-1" aria-hidden="true" value="fbc"><option class="select__option" value="fbc">Free Basic 1.04</option><option class="select__option" value="c11">GNU c11 4.9</option><option class="select__option" value="plain_c">GNU c 4.9</option><option class="select__option" value="plain_c_x32">GNU c x32 4.9</option><option class="select__option" value="mono_csharp">Mono C# 2.10.8.1</option><option class="select__option" value="gcc">GNU c++ 4.9</option><option class="select__option" value="gcc0x">GNU c++ 11 4.9</option><option class="select__option" value="dmd">dmd</option><option class="select__option" value="gdc">GDC 4.9</option><option class="select__option" value="dcc">Delphi 2.4.4</option><option class="select__option" value="gc">gc go</option><option class="select__option" value="gccgo">gcc go</option><option class="select__option" value="haskell">Haskell 4.7.1</option><option class="select__option" value="java7">Oracle Java 7</option><option class="select__option" value="java7_x32">Oracle Java 7 x32</option><option class="select__option" value="java8">Oracle Java 8</option><option class="select__option" value="nodejs">Node JS 0.10.28</option><option class="select__option" value="ocaml4">ocaml 4.02.3</option><option class="select__option" value="fpc">Free pascal 2.4.4</option><option class="select__option" value="pascalabc">PascalABC 3.1</option><option class="select__option" value="perl">Perl 5.14</option><option class="select__option" value="php">PHP 5.3.10</option><option class="select__option" value="python2_6">Python 2.7</option><option class="select__option" value="python3_4">Python 3.4.3</option><option class="select__option" value="r_core">R</option><option class="select__option" value="ruby">Ruby 1.9.3</option><option class="select__option" value="ruby2">ruby 2.2.3</option><option class="select__option" value="rust">rust 1.2</option><option class="select__option" value="scala">Scala 2.9.1</option><option class="select__option" value="bash">GNU bash 4.2.24</option><option class="select__option" value="pypy4">pypy4 </option></select></span></div><div class="solution solution_type_group solution_selected_text i-bem solution_js_inited" data-bem="{&quot;solution&quot;:{&quot;id&quot;:&quot;215/2017_02_28/C2wW78rEo2@solution&quot;,&quot;problemId&quot;:&quot;215/2017_02_28/C2wW78rEo2&quot;,&quot;compilerId&quot;:&quot;&quot;,&quot;maxFileSize&quot;:262144}}"><div class="solution__field solution__field_role_switcher"><span class="radio-button radio-button_size_s radio-button_theme_normal i-bem radio-button_js_inited" data-bem="{&quot;radio-button&quot;:{&quot;live&quot;:false}}"><label class="radio-button__radio radio-button__radio_checked_yes radio-button__radio_pressed_yes radio-button__radio_side_left" for="uniq14928636781617"><input class="radio-button__control" autocomplete="off" value="text" checked="checked" id="uniq14928636781617" type="radio" name="215/2017_02_28/C2wW78rEo2@solution"><span class="radio-button__text">Набрать здесь</span></label><label class="radio-button__radio radio-button__radio_side_right radio-button__radio_next-for-pressed_yes" for="uniq14928636781618"><input class="radio-button__control" autocomplete="off" value="file" id="uniq14928636781618" type="radio" name="215/2017_02_28/C2wW78rEo2@solution"><span class="radio-button__text">Отправить файл</span></label></span></div><div class="solution__field solution__field_role_panes"><div class="solution__pane solution__pane_name_text solution__pane_selected_yes"><span class="input input_type_textarea input_size_s input_role_code-type-text input_theme_normal i-bem input_js_inited" data-bem="{&quot;input&quot;:{&quot;live&quot;:false}}"><span class="input__box"><textarea class="input__control" id="uniq14928636781619" name="215/2017_02_28/C2wW78rEo2@text" aria-labelledby="labeluniq14928636781619 hintuniq14928636781619" rows="8" cols="10" style="display: none;"></textarea><div class="CodeMirror cm-s-neat"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 33px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 29px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; min-width: 7px; min-height: 21px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><div style="width: 50px; height: 50px; overflow-x: scroll;"></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 12.6666px;">&nbsp;</div></div><div class="CodeMirror-code"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 20px;">1</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 21px;"></div><div class="CodeMirror-gutters" style="height: 200px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 28px;"></div></div></div></div><span class="input__clear" unselectable="on"></span></span></span></div><div class="solution__pane solution__pane_name_file"><span class="attach attach_theme_normal attach_size_s attach_disabled_yes attach_role_code-type-attach attach_for_contest i-bem attach_js_inited" data-bem="{&quot;attach&quot;:{&quot;live&quot;:false}}"><span class="button button_theme_normal button_size_s button_disabled_yes attach__button i-bem" data-bem="{&quot;button&quot;:{}}"><span class="button__text" id="textuniq149286367816110" aria-hidden="true">Выбрать</span><input class="attach__control button__control" type="file" name="215/2017_02_28/C2wW78rEo2@file" id="uniq149286367816110" aria-labelledby="textuniq149286367816110" disabled="disabled"></span><span class="attach__holder attach__holder_state_hidden attach__holder_file_unknown" aria-hidden="true"><img class="image attach__icon-file" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt=""><span class="attach__text">Файл не выбран</span><img class="image attach__reset attach__reset_visibility_visible" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt=""></span></span></div></div></div></div></fieldset><div class="problem__send"><input type="hidden" name="sk" value="u49d5f1a960571a3aee76f2b9db9e3721"><input type="hidden" name="retpath" value="https://contest.yandex.ru/contest/4085/problems/C/#215/2017_02_28/C2wW78rEo2"><button class="button button_theme_action button_size_s button_role_submit i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="submit"><span class="button__text">Отправить</span></button></div><div class="problem__attempts"><div class="msg msg_type_info"><img class="image msg__icon" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt=""><img class="image msg__icon" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt="">осталось 100 попыток</div></div></form><ul class="tabs-menu tabs-menu_theme_normal tabs-menu_layout_vert tabs-menu_size_m tabs-menu_role_problems inline-block i-bem tabs-menu_js_inited" data-bem="{&quot;tabs-menu&quot;:{}}" role="menu"><li class="tabs-menu__tab tabs-menu__tab_first_yes"><a class="link" href="https://contest.yandex.ru/contest/4085/problems/A/"><span class="tabs-menu__tab-content-text">A. Игра</span></a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest/4085/problems/B/"><span class="tabs-menu__tab-content-text">B. Красивые записи</span></a></li><li class="tabs-menu__tab tabs-menu__tab_active_yes"><a class="link" href="https://contest.yandex.ru/contest/4085/problems/C/"><span class="tabs-menu__tab-content-text">C. Тир</span></a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest/4085/problems/D/"><span class="tabs-menu__tab-content-text">D. Звезды</span></a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest/4085/problems/E/"><span class="tabs-menu__tab-content-text">E. Блокировки</span></a></li><li class="tabs-menu__tab"><a class="link" href="https://contest.yandex.ru/contest/4085/problems/F/"><span class="tabs-menu__tab-content-text">F. Горки</span></a></li></ul><div class="msg msg_type_info"><img class="image msg__icon" src="./C. Тир — Задание на стажировку 2017 — Яндекс.Контест_files/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" alt="">Посылок нет</div></div></div><div class="page__foot"><div class="footer clearfix" role="contentinfo"><div class="footer__column"><a class="link footer__link" href="https://yandex.ru/support/contest/troubleshooting.xml?form1580-cntst_link=https%3A%2F%2Fcontest.yandex.ru%2Fcontest%2F4085%2Fproblems%2FC%2F&amp;form1580-cntst_login=lisenenkov.gleb">Обратная связь</a></div><div class="footer__column footer__column_side_right"><div class="copyright">©&nbsp;2013–2017&nbsp;&nbsp;ООО «<a class="copyright__link footer__link" href="http://www.yandex.ru/">Яндекс</a>»</div></div></div></div><i class="b-statcounter"><i class="b-statcounter__metrika b-statcounter__metrika_type_js i-bem b-statcounter__metrika_js_inited" data-bem="{&quot;b-statcounter__metrika&quot;:{&quot;id&quot;:16150693}}"><noscript>&lt;img alt="" src="//mc.yandex.ru/watch/16150693"/&gt;</noscript></i></i><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div></div></body></html>

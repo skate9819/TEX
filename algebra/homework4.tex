@@ -1,0 +1,287 @@
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{center}	
+		Домашнне задание №4 \\
+		Григорьев Дмитрий БПМИ--163
+	\end{center}
+	\textbf{Задание 1.}
+	\\
+	\textbf{Решение:}
+	\\
+	\indent
+	$\bullet$ Пусть $x \in X$, тогда орбита $x~~Gx = \{g \cdot x | g \in G\}$ -- это элементы, которые мы можем получить действием $G$ на $x$.\\
+	Пусть $g = \begin{pmatrix}
+	a~0~0\\
+	0~b~0\\
+	0~0~c\\
+	\end{pmatrix}$, а $x = \begin{pmatrix}
+	q\\
+	w\\
+	e\\
+	\end{pmatrix}$, где $a, b, c \in \mathbb{R} \setminus \{0\}~~~ q, w, e \in \mathbb{R}$\\
+	Тогда $g \cdot x = \begin{pmatrix}
+	a~0~0\\
+	0~b~0\\
+	0~0~c\\
+	\end{pmatrix} \cdot \begin{pmatrix}
+	q\\
+	w\\
+	e\\
+	\end{pmatrix} = \begin{pmatrix}
+	a\cdot q\\
+	b \cdot w\\
+	c \cdot e\\
+	\end{pmatrix}$.\\
+	Но $q, w$ или $e$ могут равняться нулю. Тогда все орбиты  для действия $G$ на множестве $X$ будут иметь вид:
+	$$ \{ \begin{pmatrix}
+	a\cdot q\\
+	b \cdot w\\
+	c \cdot e\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	0\\
+	b \cdot w\\
+	c \cdot e\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	a\cdot q\\
+	0\\
+	c \cdot e\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	a\cdot q\\
+	b \cdot w\\
+	0\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	a\cdot q\\
+	0\\
+	0\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	0\\
+	b \cdot w\\
+	0\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	0\\
+	0\\
+	c \cdot e\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	0\\
+	0\\
+	0\\
+	\end{pmatrix}\}$$
+	\\
+	$\bullet$ Пусть $x \in X$, стабилизатор $x~St(x) := \{g \in G | g \cdot x = g\}$ -- это элементы $G$, которые не изменяют $x$ при действии.\\
+	Пусть $g = \begin{pmatrix}
+	a~0~0\\
+	0~b~0\\
+	0~0~c\\
+	\end{pmatrix}$ -- стабилизатор $x$, а $x = \begin{pmatrix}
+	q\\
+	w\\
+	e\\
+	\end{pmatrix}$, где $a, b, c \in \mathbb{R} \setminus \{0\}~~~ q, w, e \in \mathbb{R}$\\
+	Тогда $g \cdot x = \begin{pmatrix}
+	a~0~0\\
+	0~b~0\\
+	0~0~c\\
+	\end{pmatrix} \cdot \begin{pmatrix}
+	q\\
+	w\\
+	e\\
+	\end{pmatrix} = \begin{pmatrix}
+	a\cdot q\\
+	b \cdot w\\
+	c \cdot e\\
+	\end{pmatrix} = \begin{pmatrix}
+	q\\
+	w\\
+	e\\
+	\end{pmatrix}$\\
+	$\begin{cases}
+	aq = q\\
+	bw = w\\
+	ce = e
+	\end{cases} \Rightarrow \begin{cases}
+	a = \begin{cases}
+	1, q \neq 0 \\
+	a \in \mathbb{R} \setminus \{0\}, q = 0\\
+	\end{cases} \\
+	b = \begin{cases}
+	1, w \neq 0 \\
+	b \in \mathbb{R} \setminus \{0\}, w = 0\\
+	\end{cases} \\
+	c = \begin{cases}
+	1, e \neq 0 \\
+	c \in \mathbb{R} \setminus \{0\}, e = 0\\
+	\end{cases} \\
+		\end{cases}$\\
+	Тогда все стабилизаторы для действия $G$ на множестве $X$ будут иметь вид:
+	$$ \{ \begin{pmatrix}
+	x~~0~~0\\
+	0~~y~~0\\
+	0~~0~~z\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	1~~0~~0\\
+	0~~y~~0\\
+	0~~0~~z\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	x~~0~~0\\
+	0~~1~~0\\
+	0~~0~~z\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	x~~0~~0\\
+	0~~y~~0\\
+	0~~0~~1\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	1~~0~~0\\
+	0~~1~~0\\
+	0~~0~~z\\
+	\end{pmatrix}\}, $$ $$\{ \begin{pmatrix}
+	1~~0~~0\\
+	0~~y~~0\\
+	0~~0~~1\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	x~~0~~0\\
+	0~~1~~0\\
+	0~~0~~1\\
+	\end{pmatrix}\}, \{ \begin{pmatrix}
+	1~~0~~0\\
+	0~~1~~0\\
+	0~~0~~1\\
+	\end{pmatrix}\}~~~x, y, z \in \mathbb{R} \setminus \{0\}$$
+	\begin{flushright}	
+		\textbf{}
+	\end{flushright}
+	\textbf{Задание 2.}\\
+	\textbf{Решение:} 
+	\\
+	\indent
+	Пусть $x = \begin{pmatrix}
+	a~~b\\
+	0~~\frac{1}{a}
+	\end{pmatrix}, g = \begin{pmatrix}
+	q~~w\\
+	0~~\frac{1}{q}
+	\end{pmatrix}~~~~x, g \in G$\\
+	Тогда действие сопряжением равно:\\
+	$xgx^{-1} = \begin{pmatrix}
+	a~~b\\
+	0~~\frac{1}{a}
+	\end{pmatrix} \begin{pmatrix}
+	q~~w\\
+	0~~\frac{1}{q}
+	\end{pmatrix} \begin{pmatrix}
+		\frac{1}{a}~~-b\\
+		0~~~~~a
+	\end{pmatrix} = \begin{pmatrix}
+	q&\frac{ab-abq^2+a^2qw}{q}\\
+	0&q
+	\end{pmatrix}$\\
+	Теперь рассмотрим $\frac{ab-abq^2+a^2qw}{q} = a^2w+ab(\frac{1 - q^2}{q})$:\\
+	1)$w \neq 0, \frac{1 - q^2}{1} \neq 0$, тогда $a^2w+ab(\frac{1 - q^2}{q}) \in \mathbb{R}$, и мы можем получить любое значение из $\mathbb{R}$\\
+	2)$w = 0, \frac{1 - q^2}{q} \neq 0$, тогда 
+	$a^2w+ab(\frac{1 - q^2}{q}) \in \mathbb{R}$, и мы можем получить любое значение из $\mathbb{R}$\\
+	3)$w \neq 0, \frac{1 - q^2}{q} = 0$, тогда\\
+	если $w < 0$, то  $a^2w+ab(\frac{1 - q^2}{q}) \in \mathbb{R}_-$, и мы можем получить любое значение из $\mathbb{R}_-$\\
+	если $w > 0$, то  $a^2w+ab(\frac{1 - q^2}{q}) \in \mathbb{R}_+$, и мы можем получить любое значение из $\mathbb{R}_+$\\
+	4)$w = 0, \frac{1 - q^2}{q} = 0$, тогда 
+	$a^2w+ab(\frac{1 - q^2}{q}) = 0$\\
+	Получается, что классы сопряжености будут иметь вид:\\
+	$\left\{
+	\begin{pmatrix}
+	x&y\\
+	0&\frac{1}{x}
+	\end{pmatrix} \bigg| 
+	 	y \in \mathbb{R}
+	\right\}x \in \mathbb{R} \backslash \{-1, 0, 1\}, \\
+	\left\{
+	\begin{pmatrix}
+	x&y\\
+	0&\frac{1}{x}
+	\end{pmatrix} \bigg| 
+	y \in \mathbb{R}_-
+	\right\}x \in \{-1, 1\},
+	\\ \left\{
+	\begin{pmatrix}
+	x&y\\
+	0&\frac{1}{x}
+	\end{pmatrix} \bigg| 
+	y \in \mathbb{R}_+
+	\right\}x \in \{-1, 1\}, \\
+	\left\{
+	\begin{pmatrix}
+	-1&0\\
+	0&-1
+	\end{pmatrix} \right\}, \left\{
+	\begin{pmatrix}
+	1&0\\
+	0&1
+	\end{pmatrix} \right\}$\\
+	\textbf{Задание 3.} 
+	\\
+	\textbf{Решение:} 
+	\\
+	\indent
+	$\sigma = (1, 2, 3, 4) = \begin{pmatrix}
+	1, 2, 3, 4\\
+	2, 3, 4, 1
+	\end{pmatrix}$\\
+	Стабилизатор $St(\sigma) = \{s \in S_4 | s\cdot \sigma \cdot s^{-1} = \sigma\}$ -- это элементы $S_4$, которые не изменяют $\sigma$ при действиями сопряжениями.\\
+	Теперь рассмотрим $s \in St(\sigma)$. Посмотрим как действует сопряжением $s$:\\
+	так как $s\cdot \sigma \cdot s^{-1} = \sigma \Rightarrow s\cdot \sigma = \sigma \cdot s$\\
+	 $$s(\sigma(1)) = \sigma(s(1))$$
+	 $$s(\sigma(2)) = \sigma(s(2))$$
+	 $$s(\sigma(3)) = \sigma(s(3))$$
+	 $$s(\sigma(4)) = \sigma(s(4))$$
+	 $$\Downarrow$$
+	 $$s(2) = \sigma(s(1))$$ 
+	 $$s(3) = \sigma(s(2))$$
+	 $$s(4) = \sigma(s(3))$$
+	 $$s(1) = \sigma(s(4))$$
+	 Видно, что $s$ зависит от какого то одного элемента , т.е. зная один элемент $s$ можно получить все остальные элементы. Поэтому можно перебрать какой-либо элемент $s$. Переберем $s(4)$:\\
+	 1) $s(4) = 1 \Rightarrow
+	 s(1) = \sigma(s(4)) = 2 \Rightarrow 
+	 s(2) = \sigma(s(1)) = 3 \Rightarrow 
+	 s(3) = \sigma(s(2)) = 4$\\
+	 2) $s(4) = 2\Rightarrow 
+	 s(1) = \sigma(s(4)) = 3 \Rightarrow 
+	 s(2) = \sigma(s(1)) = 4 \Rightarrow 
+	 s(3) = \sigma(s(2)) = 1$\\
+	 3) $s(4) = 3\Rightarrow 
+	 s(1) = \sigma(s(4)) = 4 \Rightarrow  
+	 s(2) = \sigma(s(1)) = 1 \Rightarrow 
+	 s(3) = \sigma(s(2)) = 2$\\
+	 4) $s(4) = 4\Rightarrow 
+	 s(1) = \sigma(s(4)) = 1 \Rightarrow  
+	 s(2) = \sigma(s(1)) = 2 \Rightarrow 
+	 s(3) = \sigma(s(2)) = 3$\\
+	 Получается, что $St(\sigma) = \{
+	 \begin{pmatrix}
+	 1, 2, 3, 4\\
+	 2, 3, 4, 1
+	 \end{pmatrix}, \begin{pmatrix}
+	 1, 2, 3, 4\\
+	 3, 4, 1, 2
+	 \end{pmatrix}, \begin{pmatrix}
+	 1, 2, 3, 4\\
+	 4, 1, 2, 3
+	 \end{pmatrix}, id\}$\\
+	\textbf{Задание 4.} \\
+	\textbf{Решение:} 
+	\\
+	\indent
+	Пусть $a \in \mathbb{Z}_k \times \mathbb{Z}_l$, тогда рассмотрим действие $a$ на элемент $g = (q, w)$.\\
+	Если $a = (0, 1)$, тогда при действии $a$ на $g$ $w$ меняется по циклу длины $l$ а $q$ не меняется. Тогда четность такой перестановки равна $(-1)^{k(l - 1)}$(так как $k$ циклов длинны $l$) \\
+	Если же $a = (1, 0)$, тогда при действии $a$ на $g$ $q$ меняется по циклу длины $k$ а $w$ не меняется. Тогда четность такой перестановки равна $(-1)^{l(k - 1)}$(так как $l$ циклов длинны $k$)\\
+	Если же $a = (x, y)$ тогда этому элементу соответствует перестановка, которая выражается через $(1, 0)$ в степени $x$ и через $(0, 1)$ в степени $y$.\\
+	Поэтому чтобы перестановка была четной должно выполнятся:\\
+	$\begin{cases}
+	k(l - 1)~mod ~2 = 0\\
+	l(k - 1) ~mod ~2 = 0
+	\end{cases}$ \\
+	Тогда получается, что $k$ и $l$ должны быть одинаковой четности.
+\end{document}

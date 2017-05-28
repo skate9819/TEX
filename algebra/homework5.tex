@@ -1,0 +1,199 @@
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{center}	
+		Домашнне задание №5 \\
+		Григорьев Дмитрий БПМИ--163
+	\end{center}
+	\textbf{Задание 1.}
+	\\
+	\textbf{Решение:}
+	\\
+	$\bullet$ 
+	Пусть $A = \begin{pmatrix}
+	a&0\\
+	b&c\\
+	\end{pmatrix}$ -- это обратимый элемент. $B = \begin{pmatrix}
+	q&0\\
+	w&e\\
+	\end{pmatrix} \in R$.\\
+	Тогда $AB = BA = E$ \\
+	$\begin{pmatrix}
+		q&0\\
+		w&e\\
+	\end{pmatrix} \begin{pmatrix}
+		a&0\\
+		b&c\\
+	\end{pmatrix} = \begin{pmatrix}
+	aq&0\\
+	be + aw&ce\\
+	\end{pmatrix} = E$\\
+	$\begin{pmatrix}
+	a&0\\
+	b&c\\
+	\end{pmatrix} \begin{pmatrix}
+	q&0\\
+	w&e\\
+	\end{pmatrix} = \begin{pmatrix}
+	aq&0\\
+	bq + cw&ce\\
+	\end{pmatrix} = E$\\
+	$\begin{cases}
+	aq = 1\\
+	ce = 1\\
+	be + aw = 0\\
+	bq + cw = 0\\
+	\end{cases}$
+	$\begin{cases}
+	a = \frac{1}{q}\\
+	c = \frac{1}{e}\\
+	b = -\frac{w}{qe}
+	\end{cases}$\\
+	Тогда обратимые элементы имеют вид:\\ 
+	\\
+	$ \left\{ \begin{pmatrix}
+	q&0\\
+	w&e
+	\end{pmatrix} \right\}~~ q, e \in \mathbb{R} \backslash \{0\}, w \in \mathbb{R}$\\
+	\\
+	\\
+	$\bullet$ Пусть $A = \begin{pmatrix}
+	q&0\\
+	w&e\\
+	\end{pmatrix}$ -- это левый делитель нуля. $B = \begin{pmatrix}
+	a&0\\
+	b&c\\
+	\end{pmatrix} \in R$.\\
+	Тогда $AB = 0$ \\
+	$\begin{pmatrix}
+	q&0\\
+	w&e\\
+	\end{pmatrix} \begin{pmatrix}
+	a&0\\
+	b&c\\
+	\end{pmatrix} = \begin{pmatrix}
+	aq&0\\
+	be + aw&ce\\
+	\end{pmatrix} = 0$\\
+	Тогда переберем все различные варианты, когда $q, w, e$ равны 0 или неравны и посмотрим, чтобы $B \neq 0$:\\
+	$t, t_1, t_2 \in \mathbb{R} \backslash \{0\}$ \\
+	1) $q = 0, w = 0, e = t$, тогда найдется $B \neq 0$\\
+	2) $q = 0, w = t, e = 0$, тогда найдется $B \neq 0$\\
+	3) $q = t, w = 0, e = 0$, тогда найдется $B \neq 0$\\
+	4) $q = t, w = t_1, e = 0$, тогда найдется $B \neq 0$\\
+	5) $q = t, w = 0, e = t_1$, тогда НЕ найдется $B \neq 0$\\
+	6) $q = 0, w = t, e = t_1$, тогда найдется $B \neq 0$\\
+	7) $q = t, w = t_1, e = t_2$, тогда НЕ найдется $B \neq 0$\\
+	\\
+	Пусть $A = \begin{pmatrix}
+	q&0\\
+	w&e\\
+	\end{pmatrix}$ -- это правый делитель нуля. $B = \begin{pmatrix}
+	a&0\\
+	b&c\\
+	\end{pmatrix} \in R$.\\
+	Тогда $BA = 0$ \\
+	$\begin{pmatrix}
+	a&0\\
+	b&c\\
+	\end{pmatrix} \begin{pmatrix}
+	q&0\\
+	w&e\\
+	\end{pmatrix}= \begin{pmatrix}
+	aq&0\\
+	bq + cw&ce\\
+	\end{pmatrix} = 0$\\
+	Тогда переберем все различные варианты, когда $q, w, e$ равны 0 или неравны и посмотрим, чтобы $B \neq 0$:\\
+	$t, t_1, t_2 \in \mathbb{R} \backslash \{0\}$ \\
+	1) $q = 0, w = 0, e = t$, тогда найдется $B \neq 0$\\
+	2) $q = 0, w = t, e = 0$, тогда найдется $B \neq 0$\\
+	3) $q = t, w = 0, e = 0$, тогда найдется $B \neq 0$\\
+	4) $q = t, w = t_1, e = 0$, тогда найдется $B \neq 0$\\
+	5) $q = t, w = 0, e = t_1$, тогда НЕ найдется $B \neq 0$\\
+	6) $q = 0, w = t, e = t_1$, тогда найдется $B \neq 0$\\
+	7) $q = t, w = t_1, e = t_2$, тогда НЕ найдется $B \neq 0$\\
+	\\
+	Тогда все делители нуля имеют вид:\\
+	$\left\{ \begin{pmatrix}
+	0&0\\
+	0&e\\
+	\end{pmatrix} \right\}, \left\{ \begin{pmatrix}
+	0&0\\
+	w&0\\
+	\end{pmatrix} \right\}, \left\{ \begin{pmatrix}
+	q&0\\
+	0&0\\
+	\end{pmatrix} \right\}, \left\{ \begin{pmatrix}
+	q&0\\
+	w&0\\
+	\end{pmatrix} \right\}, \left\{ \begin{pmatrix}
+	0&0\\
+	w&e\\
+	\end{pmatrix} \right\}~~~ q, w, e \in \mathbb{R}\backslash \{0\}$\\
+	\\
+	\\
+	$\bullet$ Пусть  Пусть $A = \begin{pmatrix}
+	q&0\\
+	w&e\\
+	\end{pmatrix}$ -- это нильпотентный элемент.\\
+	Тогда $A^m = \begin{pmatrix}
+	q^m&0\\
+	w'&e^m\\
+	\end{pmatrix}, w' \in \mathbb{R}$\\
+	Получается, что $q = e = 0$\\
+	Тогда $A^2 = \begin{pmatrix}
+	q^2&0\\
+	ew + qw&e^2\\
+	\end{pmatrix}$ и так как $q = e = 0$, то $A^2 = \begin{pmatrix}
+	0&0\\
+	0&0\\
+	\end{pmatrix}$\\
+	\\
+	Тогда все нильпотентные элементы имеют вид:\\
+	$\begin{pmatrix}
+	0&0\\
+	w&0\\
+	\end{pmatrix}~~w \in \mathbb{R} \backslash \{0\}$
+	\indent
+	\begin{flushright}	
+		\textbf{}
+	\end{flushright}
+	\textbf{Задание 2.}\\
+	\textbf{Решение:} 
+	\\
+	Идеал $I = (2, x)$ -- является идеалом в кольце $\mathbb{Z}[x]$ и не является главным.\\
+	Этот идеал, порожденный $2$ и $x$ состоит из многочленов вида $2q(x) + xw(x)$, где $q(x), w(x) \in \mathbb{Z}[x]$. Видно, что свободные члены в идеале -- четны, так как мы удваиваем свободный член $q(x)$.\\
+	$\bullet$
+	$I$ -- идеал, так как $\forall i \in I \forall r \in \mathbb{Z}[x]$ произведение $ir$, $ri \in I$\\
+	Действительно, все целочисленные многочлены с четным свободным членом при умножении дают снова многочлен с четным свободным членом, который принадлежит идеалу.\\
+	$\bullet$ Пусть $I$ -- главный идеал, тогда можно сказать, что $I = (p(x))$. Тогда так как $2$ и $x$ тоже лежат в идеале, тогда $2~mod~p(x) = 0$ и $x~mod~p(x) = 0$, значит $p(x) = \pm 1$. Тогда $I = (\pm1) = \mathbb{Z}[x]$, но $I = (2, x) \neq \mathbb{Z}[x]$, так как в $I$ -- все многочлены имеют четный свободный член. Следовательно, $I$ -- не главный идеал.\\
+	\\
+	\textbf{Задание 3.} 
+	\\
+	\textbf{Решение:} 
+	\\
+	\indent
+	$f(x) = x^3 - x^2 + 2$\\
+	Пусть $g(x)$ -- многочлен степени $n$, $g(x) = q(x) * f(x) + p(x)$, тогда при делении $g(x)$ на $f(x)$ получим $p(x)$, причем степень $p(x) < 3$, значит\\
+	$$p(x) = ax^2 +bx + c$$\\
+	Рассмотрим отображение $\varphi: \mathbb{R}[x] \longmapsto p(x), \varphi(g(x)) = g(x)~mod~f(x)$\\
+	Тогда $(f(x)) = Ker\varphi$, так как $\forall a \in (f(x))~ \varphi(a) = 0$\\
+	Тогда по теореме о гомоморфизме колец:\\
+	\begin{gather*}
+	\mathbb{R}[x] \backslash (x^3 - x^2 + 2) \simeq Im\varphi \\
+	\mathbb{R}[x] \backslash (x^3 - x^2 + 2) \simeq \left\{ p(x) \right\}
+	\end{gather*}
+	Базис $\mathbb{R}_{\leq 2}$ -- это $1, x, x^2$. Тогда многочлен $p(x)$ можно представить в виде лиенйной комбинации элементов базиса. Так как в базисе $p(x)$ -- $3$ элемента, значит размерность $\mathbb{R}$--алгебры $\mathbb{R}[x] \backslash (x^3 - x^2 + 2)$ равна 3.\\
+	\\\	
+	\textbf{Задание 4.} \\
+	\textbf{Решение:} 
+	\\
+	\indent
+	
+\end{document}
